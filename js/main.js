@@ -35,7 +35,7 @@ QuoteRequester.prototype.requestQuote = function(){
              url: this.url,
              data: {"cat": this.topic},
              dataType: 'json',
-             async: true,
+             async: false,
              accept: {
                  json: "application/json"
              },
@@ -77,14 +77,17 @@ function myFunction(){
 
     var quote;
 
+    /*
     $.when(q.requestQuote()).done(function() {
         quote = q.getQuote();
         console.log("logging " + JSON.stringify(quote));
         //q.getQuote();
 
     });
-    console.log(quote);
+    */
+    q.requestQuote();
 
+    console.log(q);
 }
 
 

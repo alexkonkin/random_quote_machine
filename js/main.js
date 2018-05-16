@@ -35,7 +35,7 @@ QuoteRequester.prototype.requestQuote = function(){
              url: this.url,
              data: {"cat": this.topic},
              dataType: 'json',
-             async: false,
+             async: true,
              accept: {
                  json: "application/json"
              },
@@ -53,10 +53,10 @@ QuoteRequester.prototype.getQuote = function(){
     return this.quote;
 }
 
-function Quote(){
-    this.quote = '';
-    this.author = '';
-    this.category = '';
+function Quote(aQuote){
+    this.quote = aQuote[0].quote;
+    this.author = aQuote[0].author;
+    this.category = aQuote[0].category;
 }
 
 Quote.prototype.getQuote = function(){
@@ -71,25 +71,18 @@ Quote.prototype.getCategory = function(){
     return this.category;
 }
 
-function myFunction(){
-    console.log("test");
-    var q = new QuoteRequester("https://andruxnet-random-famous-quotes.p.mashape.com/", "pd9oOREpx3msh2g7wpKqSIXyf4MWp1WcU8BjsnWT72D2uj83at", "famous");
+function getNewQuote(){
+    var q = new QuoteRequester("https://andruxnet-random-famous-quotes.p.mashape.com/",
+                                "pd9oOREpx3msh2g7wpKqSIXyf4MWp1WcU8BjsnWT72D2uj83at",
+                                "famous");
 
-    var quote;
-
-    /*
-    $.when(q.requestQuote()).done(function() {
-        quote = q.getQuote();
-        console.log("logging " + JSON.stringify(quote));
-        //q.getQuote();
-
-    });
-    */
-    q.requestQuote();
-
-    console.log(q);
+     $.when(q.requestQuote()).done(function() {
+         var reply = new Quote(q.getQuote());
+         $("#quote").text(reply.quote);
+         $("#author").text(reply.author);
+         console.log("logging " + reply.quote);
+     });
 }
-
 
 
 

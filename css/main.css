@@ -3,9 +3,14 @@
     border-width: thin;
 }
 
+body {
+    background-image: url("http://drive.google.com/uc?export=view&id=1hsr4SFOMXxqUpMPCDk16V97SDXcjUsv_");
+    background-color: #cccccc;
+}
+
 
 html,body{
-    height:80%;
+    height:98%;
 }
 
 /*
@@ -52,3 +57,23 @@ blockquote cite:before {
     content: "\2014 \2009";
 }
 
+.button-operations {
+    color: black;
+    border-color: #83868a;
+    border-style: solid;
+    background-color: transparent;
+    box-shadow: none;
+
+}
+
+.button-operations:hover {
+    color: black;
+    border-color: #475665;
+    border-style: solid;
+    background-color: #e5eefb;
+}
+
+
+#twitter, #tumblr, #new_quote{
+    box-shadow: none;
+}

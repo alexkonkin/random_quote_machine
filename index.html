@@ -24,30 +24,12 @@
 </head>
 <body>
 
-<button onclick="myFunction()">Click me</button>
-
-<div class="container-fluid v-border d-flex justify-content-center align-items-center" style="height: 100%; width:100%; ">
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100%; width:100%; ">
     <div class="d-flex flex-column justify-content-center">
-        <!--div class="p-2 border-item ml-3 mr-3 mt-3 v-border" style="height:180px;width:600px">
-
-
-                <blockquote class="mt-2 ml-3 mr-3 v-border">
-                        <p class="">Borlaug's life and achievement are testimony to the far-reaching contribution that one man's towering intellect, persistence and scientific vision can make to human peace and progress.</p>
-                        <footer class="mt-3">
-                            <cite>Indian Prime Minister Manmohan Singh</cite>
-                        </footer>
-                </blockquote>
-        </div>
-        <div class="p-2 border-item ml-3 mr-3 v-border">
-            <button type="button" class="btn btn-tw"><i class="fa fa-twitter"></i></button>
-                    <button type="button" class="btn btn-tb"><i class="fa fa-tumblr"></i></button>
-            <div class="btn btn-primary float-right" >New quote</div>
-        </div>
-        -->
-        <div class="p-2 border-item ml-3 mr-3 v-border">
+        <div class="p-2 border-item ml-3 mr-3">
             <div class="row">
                 <div class="col-10">
-                    <blockquote class="mt-2 ml-3 mr-3 v-border">
+                    <blockquote class="mt-2 ml-3 mr-3">
                         <p id="quote">Borlaug's life and achievement are testimony to the far-reaching contribution that one man's towering intellect, persistence and scientific vision can make to human peace and progress.</p>
                         <footer class="mt-3">
                             <cite id="author">Indian Prime Minister Manmohan Singh</cite>
@@ -56,20 +38,26 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-11 ml-4 v-border">
-                    <button type="button" class="btn btn-tw btn-primary"><i class="fa fa-twitter"></i></button>
-                    <button type="button" class="btn btn-tb btn-primary"><i class="fa fa-tumblr"></i></button>
-                    <div id="new" onclick="getNewQuote()"  class="btn btn-primary float-right" >New quote</div>
+                <div class="col-11 ml-4 ">
+                    <button  type="button" id="twitter" class="btn btn-tw button-operations"><i class="fa fa-twitter"></i></button>
+                    <button  type="button" id="tumblr" class="btn btn-tb button-operations"><i class="fa fa-tumblr"></i></button>
+                    <button  type="button" id="new_quote" onclick="getNewQuote()" class="btn button-operations float-right"><i class="fa"></i>New quote</button>
+
+                    <!--div id="new" onclick="getNewQuote()"  class="btn btn-primary float-right" >New quote</div-->
                 </div>
             </div>
         </div>
-
-        <div class="p-2 border-item ml-3 mr-3 mb-3 v-border">
-            <div class="text-center small">by alex konkin</div>
-        </div>
     </div>
 </div>
-
+<footer class="text-center">
+    <div class="row">
+        <div class="col-6"></div>
+        <div class="col-2">
+            <small>Written and coded by <a href="https://www.freecodecamp.org/alexkonkin" target="_blank"> Alexey Konkin </a></small>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</footer>
 <script src="./js/main.js"></script>
 </body>
 </html>

@@ -73,6 +73,9 @@ blockquote cite:before {
     background-color: #e5eefb;
 }
 
+#tumblr{
+    width: 40.82px;
+}
 
 #twitter, #tumblr, #new_quote{
     box-shadow: none;

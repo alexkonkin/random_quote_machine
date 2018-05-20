@@ -74,17 +74,13 @@ function getNewQuote(){
 }
 
 function tweetQuote() {
-    event.preventDefault();
     window.open("https://twitter.com/intent/tweet?hashtags=quotes&text=" + $('#quote').text() +"%0A"+"%E2%80%94 "+$("#author").text() ,
-                "twitterwindow",
-                "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0");
+    '_blank');
 }
 
 function tumblrQuote(){
-    event.preventDefault();
     window.open("https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes&caption=" + $("#author").text() +"&content="+ $('#quote').text() +"&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button" ,
-        "tumblrwindow",
-        "height=450, width=550, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0");
+    '_blank');
 
 }
 
